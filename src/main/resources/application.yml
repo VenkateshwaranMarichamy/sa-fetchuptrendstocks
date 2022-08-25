@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://sa_bot:Dummy@cluster0.64cqd.mongodb.net/?retryWrites=true&w=majority
+      database: tradeStrategies
