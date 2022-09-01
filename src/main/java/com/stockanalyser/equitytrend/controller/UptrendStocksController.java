@@ -30,7 +30,9 @@ public class UptrendStocksController {
 
 	@Autowired
 	private UptrendStocksImpls uptrendStocksImpls;
-
+	
+	
+	//Get mapping using path variable
 	@GetMapping("/trendstocks/{fromDate}/{toDate}")
 	public ResponseEntity<TrendStockResponse> getAllStocksPathVar(@PathVariable String fromDate, @PathVariable String toDate ) {
 
@@ -64,7 +66,7 @@ public class UptrendStocksController {
 		response.setNoOfResults(stocksList.size());
 		return new ResponseEntity<TrendStockResponse>(response, HttpStatus.OK);
 	}
-
+	//Getmappiing using Request params
 	@GetMapping("/trendstocks/")
 	public ResponseEntity<?> getAllStocksReqParam(@RequestParam String fromdate, @RequestParam String todate ) {
 
